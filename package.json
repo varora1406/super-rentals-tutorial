@@ -34,7 +34,16 @@
     "pregenerate": "yarn compile",
     "generate": "node ./dist/bin/generate.js",
     "prebuild": "yarn clean",
-    "build": "yarn generate"
+    "build": "yarn generate",
+
+    "echo:path": "echo \"$PATH\"",
+    "which:volta": "which volta",
+    "which:node": "which node",
+    "which:yarn": "which yarn",
+    "which:npm": "which npm",
+    "which:ember": "which ember",
+    "node:debug": "node ./dist/bin/debug.js",
+    "node:exec": "node ./dist/bin/exec.js"
   },
   "volta": {
     "node": "12.8.1",

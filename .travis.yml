@@ -25,6 +25,26 @@ before_install:
 
 install:
   - yarn
+  - yarn compile
 
 script:
-  - yarn build
+  - echo "${PATH}"
+  - which volta
+  - which node
+  - which yarn
+  - which npm
+  - which ember
+  - yarn echo:path
+  - yarn which:volta
+  - yarn which:node
+  - yarn which:yarn
+  - yarn which:npm
+  - yarn which:ember
+  - yarn node:debug
+  - yarn node:exec "echo \"${PATH}\""
+  - yarn node:exec "which volta"
+  - yarn node:exec "which node"
+  - yarn node:exec "which yarn"
+  - yarn node:exec "which npm"
+  - yarn node:exec "which ember"
+  - yarn node:exec "node ./dist/bin/debug.js"
