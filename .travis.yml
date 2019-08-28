@@ -21,6 +21,15 @@ env:
   global:
     - VOLTA_HOME=/home/travis/.volta/
     - PATH=$VOLTA_HOME/bin:$PATH
+  matrix:
+    - SLEEP=""
+    - SLEEP=0
+    - SLEEP=1
+    - SLEEP=5
+    - SLEEP=10
+    - SLEEP=30
+    - SLEEP=60
+    - SLEEP=180
 
 before_install:
   - curl https://get.volta.sh | bash
@@ -33,7 +42,17 @@ install:
   - yarn upgrade ember-cli
 
 script:
-  - yarn build
+  - mkdir -p tmp
+  - pushd tmp
+  # Hack: convince ember-cli we are really not in a project. Otherwise, we will get the "You cannot use the new command inside an ember-cli project." error when running `ember new`.
+  - echo "{}" > package.json
+  - volta pin node@12
+  - ../node_modules/.bin/ember new zomg
+  # Clean up the hack above
+  - rm package.json
+  - pushd zomg
+  - volta pin node@12
+  - node ../../test.js
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_abcbee76306e_key -iv $encrypted_abcbee76306e_iv -in deploy-keys.tar.gz.enc -out deploy-keys.tar.gz -d
