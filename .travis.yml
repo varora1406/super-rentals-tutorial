@@ -4,11 +4,6 @@ language: minimal
 addons:
   apt:
     packages:
-      # These are required to run new chrome on old trusty
-      - fonts-liberation
-      - libappindicator3-1
-      - libnss3
-      - xdg-utils
       # These are for optimizing screenshots
       - advancecomp
       - optipng
