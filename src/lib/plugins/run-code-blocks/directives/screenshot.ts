@@ -104,6 +104,7 @@ async function main() {
 
   script.push(
 `
+  await page.mouse.move(${js(width + 100)}, ${js((height || 0) + 100)});
   await page.$$eval('img', async imgs => {
     for (let img of imgs) {
       if (!img.complete) {
