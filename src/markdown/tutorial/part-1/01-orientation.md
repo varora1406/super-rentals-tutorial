@@ -251,7 +251,7 @@ visit http://localhost:4200/?deterministic
 
 > Zoey says...
 >
-> The `localhost` address in the URL means that you can only access the development server from your local machine. If you would like to share your work with the world, you will have to *[deploy][TODO: link to deploy]* your app to the public Internet. We'll cover how to do that in Part 2 of the tutorial.
+> The `localhost` address in the URL means that you can only access the development server from your local machine. If you would like to share your work with the world, you will have to *[deploy][TODO: link to deploy and add back "We'll cover how to do that in Part 2 of the tutorial."]* your app to the public Internet. 
 
 You can exit out of the development server at any time by typing `Ctrl + C` into the terminal window where `ember server` is running. That is, typing the "C" key on your keyboard *while* holding down the "Ctrl" key at the same time. Once it has stopped, you can start it back up again with the same `ember server` command. We recommend having two terminal windows open: one to run the server in background, another to type other Ember CLI commands.
 
