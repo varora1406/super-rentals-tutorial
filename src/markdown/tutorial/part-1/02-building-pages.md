@@ -57,7 +57,7 @@ With that in place, we can create a new `app/templates/about.hbs` template with 
 </div>
 ```
 
-To see this in action, navigate to `http://localhost:4200/about`.
+To see this in action, navigate to <http://localhost:4200/about>.
 
 ```run:screenshot width=1024 retina=true filename=about.png alt="About page"
 visit http://localhost:4200/about?deterministic
@@ -112,7 +112,7 @@ Speaking of the template, let's create that as well. We'll add a `app/templates/
 
 Ember comes with strong *[conventions][TODO: link to conventions]* and sensible defaults&mdash;if we were starting from scratch, we wouldn't mind the default `/contact` URL. However, if the defaults don't work for us, it is no problem at all to customize Ember for our needs!
 
-Once you have added the route and the template above, we should have the new page available to us at `http://localhost:4200/getting-in-touch`.
+Once you have added the route and the template above, we should have the new page available to us at <http://localhost:4200/getting-in-touch>.
 
 ```run:screenshot width=1024 retina=true filename=contact.png alt="Contact page"
 visit http://localhost:4200/getting-in-touch?deterministic

@@ -380,7 +380,7 @@ As we learned earlier, the Ember convention is to place your source code in the 
 Both Ember CLI and the development server understand these folder conventions and will automatically make these files available to the browser.
 
 You can confirm this by navigating to
-`http://localhost:4200/assets/images/teaching-tomster.png`. The image should also show up in the welcome page we have been working on. You may need to do a manual refresh for the browser to pick up the new file.
+<http://localhost:4200/assets/images/teaching-tomster.png>. The image should also show up in the welcome page we have been working on. You may need to do a manual refresh for the browser to pick up the new file.
 
 ```run:command hidden=true cwd=super-rentals
 git add public/assets/images/teaching-tomster.png
